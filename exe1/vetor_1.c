@@ -1,3 +1,4 @@
+
 #include<stdio.h>
 
 #define t 4
@@ -25,7 +26,7 @@ int main(){
         printf("%d | ",vet[i]);
     }
 
-    printf("\nMaior: %d\nMenor: %d",maior,menor);
+    printf("\nMaior: %d\nMenor: %d\n",maior,menor);
 
 
     return 0;
