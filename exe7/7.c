@@ -4,6 +4,7 @@
 #define  tam2 5
 
 
+
 int main(int argc, char const *argv[]) {
   /* Faça um programa que carregue um vetor com 20 números inteiros
   não repetidos e um segundo vetor com 15 números inteiros não

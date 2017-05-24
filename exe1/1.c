@@ -9,7 +9,7 @@ int main(){
     float valor_inf;
 
     printf("Informe um valor: ");
-    scanf("%d", &valor_inf);
+    scanf("%f", &valor_inf);
 
     valor_int = (int) valor_inf;
 
@@ -38,6 +38,7 @@ int main(){
     }
 
     printf("\nMaior: %d\nMenor: %d\n",maior,menor);
+
 
 
     return 0;
