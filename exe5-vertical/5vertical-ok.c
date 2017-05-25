@@ -47,8 +47,8 @@ char inteiro(float num_inf, int pos_vetor){
   return resultado[pos_vetor];
 }
 
-#define tam 5
-#define tam_vetor_C 10
+#define tam 25
+#define tam_vetor_C 50
 
 int main(int argc, char const *argv[]) {
 
@@ -133,53 +133,29 @@ int main(int argc, char const *argv[]) {
   }
 
   pos_vetor = 0;
-  while (imprime < tam) {
-    /* imprime o vetor_A */
+  for (pos_vetor = 0; pos_vetor < tam; pos_vetor++) {
+    /* code */
     if (pos_vetor == 0) {
-      /* vetor_A */
-      printf("\n         Vetor A\n\nPosicao:  %d",pos_vetor);
-      pos_vetor++;
+      printf("\n+---------+-----------+-----------+");
+      printf("\n| Posicao |  Vetor A  |  Vetor B  |");
+
     }
-    if (pos_vetor > 0 && pos_vetor < tam) {
-      /* vetor_A */
-      printf(" %3.d", pos_vetor);
-      pos_vetor++;
+
+    if (pos_vetor >= 0) {
+      /* code */
+      printf("\n|---------|-----------|-----------|");
+      printf("\n|%5.d    |%6.d     |%6.d     |",pos_vetor+1,vetor_A[pos_vetor],vetor_B[pos_vetor]);
     }
-    if (pos_vetor > tam - 1 && imprime == 0) {
-      /* vetor_A */
-      printf("\nValor: ");
+    if (pos_vetor == tam-1) {
+      /* code */
+      printf("\n+---------+-----------+-----------+" );
     }
-    if (pos_vetor > tam - 1) {
-      /* valor vetor_A*/
-      printf(" %3.d", vetor_A[imprime]);
-      imprime++;
-    }
+
+
+
   }
 
-  pos_vetor = 0;
-  imprime = 0;
-  while (imprime < tam) {
-    /* imprime o vetor_B */
-    if (pos_vetor == 0) {
-      /* vetor_B */
-      printf("\n\n         Vetor B\n\nPosicao:  %d",pos_vetor);
-      pos_vetor++;
-    }
-    if (pos_vetor > 0 && pos_vetor < tam) {
-      /* vetor_B */
-      printf(" %3.d", pos_vetor);
-      pos_vetor++;
-    }
-    if (pos_vetor > tam - 1 && imprime == 0) {
-      /* vetor_B */
-      printf("\nValor: ");
-    }
-    if (pos_vetor > tam - 1) {
-      /* valor vetor_B*/
-      printf(" %3.d", vetor_B[imprime]);
-      imprime++;
-    }
-  }
+
   printf("\n\n" );
 
 
@@ -199,31 +175,28 @@ int main(int argc, char const *argv[]) {
       pos_fim--;
     }
   }
-
-  pos_vetor = 0;
-  imprime = 0;
-  while (imprime < tam_vetor_C) {
-    /* imprime o vetor_C */
+  for (pos_vetor = 0; pos_vetor < tam_vetor_C; pos_vetor++) {
+    /* code */
     if (pos_vetor == 0) {
-      /* vetor_C */
-      printf("\n         Vetor C\n\nPosicao:  %d",pos_vetor);
-      pos_vetor++;
+      printf("\n+---------+-----------+");
+      printf("\n| Posicao |  Vetor C  |");
+
     }
-    if (pos_vetor > 0 && pos_vetor < tam_vetor_C) {
-      /* vetor_C */
-      printf(" %3.d", pos_vetor);
-      pos_vetor++;
+
+    if (pos_vetor >= 0) {
+      /* code */
+      printf("\n|---------|-----------|");
+      printf("\n|%5.d    |%6.d     |",pos_vetor+1,vetor_C[pos_vetor]);
     }
-    if (pos_vetor > tam_vetor_C - 1 && imprime == 0) {
-      /* vetor_C */
-      printf("\nValor: ");
+    if (pos_vetor == tam_vetor_C-1) {
+      /* code */
+      printf("\n+---------+-----------+" );
     }
-    if (pos_vetor > tam_vetor_C - 1) {
-      /* valor vetor_C*/
-      printf(" %3.d", vetor_C[imprime]);
-      imprime++;
-    }
+
+
+
   }
+
   printf("\n\n\n" );
 
   return 0;
